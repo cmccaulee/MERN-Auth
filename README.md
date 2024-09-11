@@ -1,2 +1,6 @@
 # MERN Auth
- Simple Auth app for MERN stack
+Simple Auth setup for MERN stack
+
+Upon registration or login, current user button logs user details to console. 
+
+

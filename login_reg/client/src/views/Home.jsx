@@ -4,9 +4,7 @@ const Home = () => {
     const user = JSON.parse(localStorage.getItem("user"));
     const button = () => {
         {
-            user
-                ? console.log(user.firstName)
-                : console.log("No user logged in");
+            user ? console.log(user) : console.log("No user logged in");
         }
     };
     const logout = () => {
