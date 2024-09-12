@@ -32,7 +32,7 @@ const LoginForm = () => {
         <>
             <form
                 onSubmit={handleSubmit}
-                className="col-start-5 col-span-3 row-start-2 row-span-2 flex flex-col gap-4 p-6 rounded-xl bg-black bg-opacity-50">
+                className="col-start-5 col-span-3 row-start-3 row-span-2 flex flex-col gap-4 p-6 rounded-xl bg-black bg-opacity-50">
                 <h1 className="text-2xl text-center">Login</h1>
                 <label
                     htmlFor="email"

@@ -16,7 +16,7 @@ const Home = () => {
     return (
         <>
             <div className="grid grid-cols-12 grid-rows-4">
-                <div className="col-span-4 col-start-5 row-start-3">
+                <div className="col-span-3 col-start-5 row-start-3">
                     {user ? (
                         <h1 className="text-2xl text-center pb-8">
                             Welcome Home, {user.firstName}{" "}
