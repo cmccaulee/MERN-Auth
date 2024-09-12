@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import AuthImage from "../../assets/images/Auth_Image.png";
+import Icon from "../../assets/icons/comp_icon.png";
+
 // local
 import useLoginReg from "../hooks/useLoginReg";
 // variables
@@ -30,57 +33,61 @@ const LoginForm = () => {
     };
     return (
         <>
-            <form
-                onSubmit={handleSubmit}
-                className="col-start-5 col-span-3 row-start-3 row-span-2 flex flex-col gap-4 p-6 rounded-xl bg-black bg-opacity-50">
-                <h1 className="text-2xl text-center">Login</h1>
-                <label
-                    htmlFor="email"
-                    className="input input-bordered flex items-center gap-2">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 16 16"
-                        fill="currentColor"
-                        className="h-4 w-4 opacity-70">
-                        <path d="M2.5 3A1.5 1.5 0 0 0 1 4.5v.793c.026.009.051.02.076.032L7.674 8.51c.206.1.446.1.652 0l6.598-3.185A.755.755 0 0 1 15 5.293V4.5A1.5 1.5 0 0 0 13.5 3h-11Z" />
-                        <path d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z" />
-                    </svg>
-                    <input
-                        className="grow"
-                        placeholder="Email"
-                        type="email"
-                        name="email"
-                        id="email"
-                        value={formState.email}
-                        onChange={(e) => handleChange(e)}
-                    />
-                </label>
-                <label
-                    htmlFor="password"
-                    className="input input-bordered flex items-center gap-2">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 16 16"
-                        fill="currentColor"
-                        className="h-4 w-4 opacity-70">
-                        <path
-                            fillRule="evenodd"
-                            d="M14 6a4 4 0 0 1-4.899 3.899l-1.955 1.955a.5.5 0 0 1-.353.146H5v1.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2.293a.5.5 0 0 1 .146-.353l3.955-3.955A4 4 0 1 1 14 6Zm-4-2a.75.75 0 0 0 0 1.5.5.5 0 0 1 .5.5.75.75 0 0 0 1.5 0 2 2 0 0 0-2-2Z"
-                            clipRule="evenodd"
+            <div className="flex shadow-2xl w-full max-w-lg rounded-xl">
+                <img
+                    className="rounded-tl-3xl rounded-bl-3xl"
+                    src={AuthImage}
+                    alt=""
+                />
+                <form
+                    onSubmit={handleSubmit}
+                    className="content-center p-16 rounded-tr-3xl rounded-br-3xl bg-white">
+                    <div className="flex justify-center">
+                        <img
+                            className="max-w-16 rounded-full "
+                            src={Icon}
+                            alt="D20 Icon"
                         />
-                    </svg>
-                    <input
-                        className="grow"
-                        type="password"
-                        name="password"
-                        placeholder="Password"
-                        id="password"
-                        value={formState.password}
-                        onChange={(e) => handleChange(e)}
-                    />
-                </label>
-                <button className="btn btn-primary">Submit</button>
-            </form>
+                    </div>
+                    <div className="flex justify-center pt-8">
+                        <div className="min-w-full">
+                            <div className="pb-8">
+                                <h1 className="text-4xl text-black text-center text-nowrap">
+                                    Welcome Back!
+                                </h1>
+                                <h2 className="text-xs text-center text-black">
+                                    Please enter your credentials
+                                </h2>
+                            </div>
+                            <label htmlFor="email" className="flex">
+                                <input
+                                    className="border-b border-black bg-white grow mb-4"
+                                    placeholder="Email"
+                                    type="email"
+                                    name="email"
+                                    id="email"
+                                    value={formState.email}
+                                    onChange={(e) => handleChange(e)}
+                                />
+                            </label>
+                            <label htmlFor="password" className="flex mb-8">
+                                <input
+                                    className="border-b bg-white border-black grow"
+                                    type="password"
+                                    name="password"
+                                    placeholder="Password"
+                                    id="password"
+                                    value={formState.password}
+                                    onChange={(e) => handleChange(e)}
+                                />
+                            </label>
+                            <button className="btn btn-block rounded-full bg-[#231D24]  text-white">
+                                Log In
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </>
     );
 };
