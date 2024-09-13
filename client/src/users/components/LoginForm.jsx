@@ -33,11 +33,11 @@ const LoginForm = () => {
     };
     return (
         <>
-            <div className="flex shadow-2xl w-full max-w-lg rounded-xl">
+            <div className="flex shadow-2xl max-w-lg rounded-xl">
                 <img
                     className="rounded-tl-3xl rounded-bl-3xl"
                     src={AuthImage}
-                    alt=""
+                    alt="Adventurers playing dnd"
                 />
                 <form
                     onSubmit={handleSubmit}

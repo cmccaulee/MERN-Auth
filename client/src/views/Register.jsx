@@ -3,7 +3,7 @@ import RegisterForm from "../users/components/RegisterForm";
 const Register = () => {
     return (
         <>
-            <div className="grid grid-cols-12 grid-rows-4">
+            <div className="flex justify-center items-center min-h-screen">
                 <RegisterForm />
             </div>
         </>
