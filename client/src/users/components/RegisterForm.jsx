@@ -1,7 +1,5 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import AuthImage from "../../assets/images/Auth_Image.png";
-import Icon from "../../assets/icons/comp_icon.png";
 // Import Local
 import useLoginReg from "../hooks/useLoginReg";
 // Variables
@@ -36,22 +34,10 @@ const RegisterForm = () => {
     return (
         <>
             <div className="flex shadow-2xl max-w-lg rounded-xl container size-auto">
-                <img
-                    className="rounded-tl-3xl rounded-bl-3xl w-full h-auto object-cover
-                    "
-                    src={AuthImage}
-                    alt="Adventurers playing dnd"
-                />
                 <form
                     onSubmit={handleSubmit}
                     className="content-center p-16 rounded-tr-3xl rounded-br-3xl bg-white">
-                    <div className="flex justify-center">
-                        <img
-                            className="max-w-16 rounded-full "
-                            src={Icon}
-                            alt="D20 Icon"
-                        />
-                    </div>
+                    <div className="flex justify-center"></div>
                     <div className="flex justify-center pt-8">
                         <div className="min-w-full">
                             <label htmlFor="firstName" className="flex ">
