@@ -11,6 +11,9 @@ UserRouter.route("/login")
     .post(UserController.login)
 UserRouter.route("/")
     .get(UserController.getAll)
+UserRouter.route("/:id")
+    .get(UserController.getOne)
+
 
 // Export the UserRouter
 export default UserRouter

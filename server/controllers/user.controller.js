@@ -79,5 +79,14 @@ const UserController = {
             res.status(400).json(err)
         }
     },
+    "getOne": async (req, res) => {
+        try {
+            const user = await UserModel.findById(req.params.id);
+            res.json(user);
+        } catch (error) {
+            console.log(error);
+            res.status(400).json(error)
+        }
+    }
 }
 export default UserController;
